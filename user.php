@@ -36,9 +36,9 @@ class User
         }
             return true;
     }
-        public function getAllUsers()
+        public function getAllUser()
         {
-            $sql = SELECT * FROM $this->table;
+            $sql = "SELECT * FROM $this->table";
             $result = $this->conn->query($sql);
 
             if ($result->num_rows > 0) {

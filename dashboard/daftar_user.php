@@ -1,11 +1,17 @@
 <?php 
-include *../header.php*;
-$result = $user->getAllUsers():
-$daftar_user =$result->fetch_all(MYSQLI_ASSOC);
+include '../user.php';
+include '../database.php';
+
+$db = new Database();
+$conn = $db->Connect();
+$user = new User($conn);
+
+$result = $user->getAllUser();
+$daftar_users =$result->fetch_all(MYSQLI_ASSOC);
 ?>
 <main class="col-md-9 ms-sm-auto col-lg-10 px-d-4">
-          <h1 class="mt-4 Daftar User</h1>
-          <hr>
+          <h1 class="mt-4"> Daftar User</h1>
+          <hr />
           <div class="table-responsive small">
             <table class="table table-striped table-sm">
               <thead>
@@ -18,9 +24,10 @@ $daftar_user =$result->fetch_all(MYSQLI_ASSOC);
                 </tr>
               </thead>
               <tbody>
-                <?php foreach($daftar_user as $user): ?>
-                <tr>
-                  <td><?php echo $user['id']; ?></td>
+                <?php foreach($daftar_users as $user){
+                  ?>
+                  <tr>
+                  <td><?php echo $user['Id']; ?></td>
                   <td><?php echo $user['username']; ?></td>
                   <td><?php echo $user['email']; ?></td>
                   <td><?php echo $user['asal']; ?></td>
@@ -28,7 +35,9 @@ $daftar_user =$result->fetch_all(MYSQLI_ASSOC);
                   delete | edit
                   </td>
                 </tr>
-                <?php
+                 <?php
+                }
+                ?>
               </tbody>
             </table>
           </div>

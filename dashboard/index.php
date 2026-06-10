@@ -385,54 +385,16 @@
                   </a>
                 </li>
               </ul>
-              <h6
-                class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase"
-              >
-                <span>Saved reports</span>
-                <a
-                  class="link-secondary"
-                  href="#"
-                  aria-label="Add a new report"
-                >
-                  <svg class="bi" aria-hidden="true">
-                    <use xlink:href="#plus-circle"></use>
-                  </svg>
-                </a>
-              </h6>
+             <hr class="my-3" />
               <ul class="nav flex-column mb-auto">
                 <li class="nav-item">
                   <a class="nav-link d-flex align-items-center gap-2" href="#">
                     <svg class="bi" aria-hidden="true">
-                      <use xlink:href="#file-earmark-text"></use>
+                      <use xlink:href="#gear-wide-connected"></use>
                     </svg>
-                    Current month
+                    Settings
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#">
-                    <svg class="bi" aria-hidden="true">
-                      <use xlink:href="#file-earmark-text"></use>
-                    </svg>
-                    Last quarter
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#">
-                    <svg class="bi" aria-hidden="true">
-                      <use xlink:href="#file-earmark-text"></use>
-                    </svg>
-                    Social engagement
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#">
-                    <svg class="bi" aria-hidden="true">
-                      <use xlink:href="#file-earmark-text"></use>
-                    </svg>
-                    Year-end sale
-                  </a>
-                </li>
-              </ul>
                 <li class="nav-item">
                   <a class="nav-link d-flex align-items-center gap-2" href="../logout.php">
                     <svg class="bi" aria-hidden="true">
@@ -445,7 +407,7 @@
             </div>
           </div>
         </div>
-       <?php include "home.php"; ?>
+       <?php include "daftar_user.php"; ?>
       </div>
     </div>
     <script
