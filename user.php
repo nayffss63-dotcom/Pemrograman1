@@ -48,5 +48,9 @@ class User
         
             }
     }
-
+        public function delete($Id){
+            $sql = "DELETE FROM $this->table WHERE id=". $Id;
+            
+            return $result;
+        }
     }
