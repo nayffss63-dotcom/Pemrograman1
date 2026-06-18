@@ -1,7 +1,7 @@
 <?php
 
 require_once "database.php";
-require_once "users.php";
+require_once "user.php";
 
     $username = $_POST["username"];
     $email = $_POST["email"];
