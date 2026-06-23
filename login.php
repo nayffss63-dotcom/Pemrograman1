@@ -22,6 +22,14 @@ if($ditemukan==false){
 $user->login($username, $password);
 $_SESSION['is_logged_in'] = true;
 header("Location: dashboard/index.php");
+
+if (!isset($_SESSION['login_count'])) {
+    $_SESSION['login_count'] = 0;
+}
+$_SESSION['login_count']++;
+
+// Lalu redirect ke dashboard
+header('Location: dashboard/index.php');
 exit;
 }
 if($password == $password_valid &&

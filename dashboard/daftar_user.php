@@ -16,6 +16,17 @@ if ($result && $result->num_rows > 0) {
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 <h1>Daftar User</h1>
 <hr />
+
+    <?php
+    $username = $_SESSION['username'] ?? 'User';
+    $jumlah_login = $_SESSION['login_count'] ?? 0;
+    ?>
+    <div class="alert alert-success w-100 mt-3 " role="alert">
+        Selamat Datang <strong><?= htmlspecialchars($username) ?></strong>
+        Anda telah login sebanyak <strong><?= $jumlah_login ?></strong> kali
+    </div>
+  
+</div>
 <a href="index.php?halaman=tambah_user_form.php" class="btn btn-primary mb-3">Tambah User</a>
           <div class="table-responsive small">
             <table class="table table-striped table-sm"> 
